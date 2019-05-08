@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Input should be an invertable matrix
+## These 2 functions create an object in which the inverse of a matrix can be stored
+## And functionality to read the inverse 
+## If it is used on large matrices it decreases processing 
 
-## Write a short comment describing this function
+## makeCache matrix creates an object where the inverse can be stored
 
 makeCacheMatrix <- function(x = matrix()) {
   ##cache inverse
@@ -21,7 +23,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve solves the matrix for any given matrix 
+## if already cached it gives the cached inverse
+## additionally it prints a message when this is the case
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
@@ -42,4 +46,5 @@ z = makeCacheMatrix(x)
 h = makeCacheMatrix(f)
 cacheSolve(z)
 cacheSolve(h)
+
 
